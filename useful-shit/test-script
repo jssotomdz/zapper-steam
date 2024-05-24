@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import os
+import rpyc
+
+ZAPPER_IP = "10.42.0.91"
+
+ZAPPER_PORT = 60000
+
+connection = rpyc.connect(
+    ZAPPER_IP,
+    ZAPPER_PORT,
+)
+
+connection.root.
+
+# idfk what's going on
+
