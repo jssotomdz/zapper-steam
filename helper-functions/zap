@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+function zap() {
+  DEVICE_IP=$1
+  set -o rematchpcre
+  if [[ $DEVICE_IP =~ '^10.102.15(\d\.\d+)' ]]; then
+    ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' \
+      'ubuntu@'$DEVICE_IP \
+      -L 60000:10.102.23$match[1]:60000 \
+      -L 60008:10.102.23$match[1]:60008 \
+      -L 60010:10.102.23$match[1]:60010
+  else
+    echo "Bad IP: $DEVICE_IP"
+    return 1
+  fi
+}
+
+zap $1
