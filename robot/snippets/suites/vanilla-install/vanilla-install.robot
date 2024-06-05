@@ -6,11 +6,6 @@ Resource    ${USB_RESOURCES}
 ${T}    ${CURDIR}
 
 *** Test Cases ***
-Get Noble Image
-	[Documentation]		Downloads noble image and flashes to usb
-	Download and Provision via USB 	https://releases.ubuntu.com/noble/ubuntu-24.04-desktop-amd64.iso
-	Start Command    reboot    true
-
 BIOS Menu into GRUB
 	[Documentation]		Make sure to boot from USB
 	Press Key And Match		F12		${T}/bios_menu_template.png		60		0.5
