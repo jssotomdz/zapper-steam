@@ -1,16 +1,19 @@
 import os
 import rpyc
+import sys
 
 # ZAPPER_IP = <ZAPPER-IP>
 ZAPPER_IP = "10.102.234.67"
 ZAPPER_PORT = 60000
+
+ROBOT_SCRIPT_NAME = sys.argv[1]
 
 ZAPPER_TESTING_DIR = os.path.dirname(os.path.realpath(__file__)) + "/.."
 TESTSUITE_DIR = ZAPPER_TESTING_DIR + "/robot/snippets/suites/vanilla-install/"
 
 TEMPLATES = [f for f in os.listdir(TESTSUITE_DIR) if os.path.isfile(os.path.join(TESTSUITE_DIR, f)) and ".png" in f]
 
-ROBOT_FILE = TESTSUITE_DIR + "vanilla-install.robot"
+ROBOT_FILE = TESTSUITE_DIR + ROBOT_SCRIPT_NAME
 
 connection = rpyc.connect(
     ZAPPER_IP,
