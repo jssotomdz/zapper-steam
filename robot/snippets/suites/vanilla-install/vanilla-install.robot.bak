@@ -18,7 +18,7 @@ GRUB Try or Install
 	Keys Combo		${combo}
 
 Select Language
-	[Documentation]		Select Language, we will default to English
+	[Documentation]		Select Language, we will default to English - REVERT MOVE POINTER TO AFTER PR MERGED
 	Match	${T}/language.png	120
 	Move Pointer To (520, 414)
 	Click LEFT Button
@@ -38,12 +38,6 @@ Keyboard Layout
 Internet Connection
 	[Documentation]		Connect to the Internet Slide
 	Match	${T}/internet-connection.png	10
-	Move Pointer To (520, 414)
-	Click LEFT Button
-
-Try or Install Ubuntu
-	[Documentation]		Try or Install Slide
-	Match	${T}/try-or-install.png		10
 	Move Pointer To (520, 414)
 	Click LEFT Button
 
@@ -71,8 +65,21 @@ How do you want to install Ubuntu
 	Move Pointer To (520, 414)
 	Click LEFT Button
 
+Select Erase Disk and Reinstall
+	[Documentation]		We assume we're wiping a machine here. Not ideal.
+	Move Pointer To		${T}/erase-disk-install-ubuntu.jpeg
+	Click LEFT Button
+	Move Pointer To (520, 414)
+	Click LEFT Button
+
+Choose Where to Install Ubuntu
+	[Documentation]		Choose the drive to install on - correct one pre-selected
+	Match	${T}/choose-where-to-install.jpeg
+	Move Pointer To (520, 414)
+	Click LEFT Button
+
 Create Account
-	[Documentation]		Create the user account
+	[Documentation]		Create the user account - SHOULD WORK AFTER PR!
 	Match	${T}/create-your-account.png		10
 	${combo}	Create List		TAB
 	Type String		ubuntu

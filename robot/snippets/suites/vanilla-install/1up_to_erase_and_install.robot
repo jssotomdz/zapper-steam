@@ -42,7 +42,7 @@ Default vs Extended
 	Click LEFT Button
 
 Proprietary Software
-	[Documentation]		CLICKING NEXT AFTER THIS SLIDE EXITS THE INSTALLER?! Slide prompting proprietary software installation
+	[Documentation]		Proprietary software
 	Match	${T}/proprietary-software.png		10
 	Move Pointer To (520, 414)
 	Click LEFT Button
