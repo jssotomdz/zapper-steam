@@ -1,5 +1,5 @@
-job_queue: 202101-28611
+job_queue: 202209-30600
 reserve_data:
   ssh_keys:
-    - lp:andersson123
+    - lp:jssotomdz
   timeout: 3600
